@@ -1,0 +1,14 @@
+{
+  "residual_tol": 2.0,
+  "requirements": [
+    {"id": "REQ-LIM-001", "text": "N1 shall not exceed 100 %", "check": "max", "signal": "N1", "limit": 100},
+    {"id": "REQ-LIM-002", "text": "N2 shall not exceed 104 %", "check": "max", "signal": "N2", "limit": 104},
+    {"id": "REQ-LIM-003", "text": "EGT shall not exceed 600 degC", "check": "max", "signal": "EGT", "limit": 600},
+    {"id": "REQ-RSP-001", "text": "N1 overshoot after a throttle step shall be at most 5 %", "check": "overshoot", "limit": 5},
+    {"id": "REQ-RSP-002", "text": "N1 10-90 % rise time shall be at most 5 s", "check": "rise", "limit": 5},
+    {"id": "REQ-RSP-003", "text": "N1 shall settle within 2 % of the step within 12 s", "check": "settling", "band_pct": 2, "limit": 12},
+    {"id": "REQ-RAT-001", "text": "Fuel flow rate shall be at most 0.45 /s", "check": "rate", "signal": "Wf", "limit": 0.45},
+    {"id": "REQ-SNS-001", "text": "N1 duplex channels shall agree within 2 %", "check": "channel_agreement", "signal": "N1", "limit": 2},
+    {"id": "REQ-SNS-002", "text": "Measured N1 shall match the model prediction within 2 %", "check": "model_residual", "signal": "N1", "limit": 2}
+  ]
+}
