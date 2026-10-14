@@ -27,7 +27,7 @@ problem is in the control response (for example the mistuned gain scenario).
 ```
 pip install -r requirements.txt
 python -m testbedlens out     # writes out/logs/*.csv and out/reports/<scenario>/report.md
-pytest -q
+python -m pytest -q
 ```
 
 Expected demo output:
