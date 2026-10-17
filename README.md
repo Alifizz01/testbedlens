@@ -1,4 +1,32 @@
-# TestBedLens
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+    <img src="assets/logo.svg" alt="TestBedLens" width="360">
+  </picture>
+</p>
+
+<p align="center">
+  <b>Engine test-bed logs in, requirement verdicts out.</b><br>
+  Checks turbofan-style test logs against a JSON requirement spec (limits, overshoot, rise and settling time, rate limits) and tells a sensor fault from a control problem.
+</p>
+
+<p align="center">
+  <a href="https://github.com/Alifizz01/TestBedLens/actions/workflows/ci.yml"><img src="https://github.com/Alifizz01/TestBedLens/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/python-3.10%2B-3776AB" alt="python">
+  <img src="https://img.shields.io/badge/pytest-10%20tests-0A9EDC" alt="pytest">
+</p>
+
+<p align="center"><img src="docs/mistuned_overshoot.png" alt="N1 response with a mistuned controller gain failing the overshoot requirement" width="900"></p>
+
+> **Scope:** Synthetic data from a simplified two-spool model; no real engine data. Personal portfolio project, not affiliated with any employer.
+
+---
+
+## The problem
+
+A run that fails a requirement can mean the controller is wrong or a sensor is lying. Checking the limits is easy; telling those two apart is the part that saves an afternoon.
+
+## Overview
 
 A small Python tool for checking turbofan test-bed style logs against requirement-style
 criteria, written as a personal learning project on engine test data analysis.
